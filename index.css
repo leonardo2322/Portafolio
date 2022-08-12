@@ -11,6 +11,7 @@ body{
 
 .root{
     display: flex;
+    overflow: none;
 }
 .contain{
     display: flex;
