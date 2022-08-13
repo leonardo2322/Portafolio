@@ -7,13 +7,15 @@
     <title>Portafolio</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
     <section class="root">
         <div class="cont-image">
             <img src="" alt="" class="show-image">
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times x"></i>
         </div>
         <div class="contain">
             <img src="./img/leo.jpeg" class="principalimg" alt="leo">
@@ -31,8 +33,8 @@
 
             </div>
             
-            <div class="works">
-                <div class="atom-spinner">
+            <div class="works" >
+                <div class="atom-spinner" >
                     <div class="spinner-inner">
                       <div class="spinner-line"></div>
                       <div class="spinner-line"></div>
@@ -40,15 +42,41 @@
                       <!--Chrome renders little circles malformed :(-->
                       <div class="spinner-circle">
                         &#9679;
-                      </div>
                     </div>
-                  </div>
-                <div>
+                </div>
+            </div>
+
+                <div data-aos="fade-up">
                     <h1>Trabajos</h1>
                     <h1>Sistemas Linux</h1>
-                    <img src="./img/ArcoLinux_2022-08-12_08-51-10.png" alt="alt">
-                    <img src="./img/ArcoLinux_2022-08-12_08-52-26.png" alt="">
+                    <img class="img" src="./img/ArcoLinux_2022-08-12_08-51-10.png" alt="alt">
+                    <img class="img" src="./img/ArcoLinux_2022-08-12_08-52-26.png" alt="">
                     <p>Manejo de la linea de comandos de linux, bash, solucion de problemas, manejo de ficheros scripts, instalacion de sistemas linux: como arch, debian,ubuntu </p>
+                </div>
+                <div data-aos="fade-up"
+                data-aos-anchor-placement="center-center">
+                    <h1>Proyectos</h1>
+                    <h1>Gui interfaz de usuario con Pyqt</h1>
+                    <img class="img" src="./img/evafoto.png" alt="alt">
+                    <img class="img" src="./img/design.png" alt="">
+                    <img class="img" src="./img/imagensoloEjecucion.png" alt="">
+                    <p>Creaciom de una interfaz grafica para el manejo administrativo de un restaurante para aprender el manejo del crud, utilizacion de qtdesign,qtcretor,y la libreria de python Pyqt </p>
+                </div>
+                <div data-aos="fade-up"
+                data-aos-anchor-placement="center-center">
+                    <h1>Diseño Adobe Ilustrator</h1>
+                    <img class="img" src="./img/IMG-20210510-WA0065.jpg" alt="alt">
+                    <img class="img" src="./img/IMG-20220228-WA0028.jpg" alt="">
+                    <img class="img" src="./img/IMG-20220315-WA0033.jpg" alt="">
+                    <img class="img" src="./img/IMG-20220420-WA0027.jpg" alt="">
+                    <p>diseño de logos edicion de fotos, esto se realizo con el fin de aprender la creacion de logos y con fines lucrativos </p>
+                </div>
+
+                <div data-aos="zoom-in">
+                    <h1>Catalogos Digitales</h1>
+                    <img class="img" src="./img/ferre.png" alt="alt">
+                    <img class="img" src="./img/IMG-20220420-WA0027.jpg" alt="">
+                    <p>Cartas digitales para la innovacion de las pequeñas empresas en la muestra de sus productos y llegar a mas clientes, se diseño con javascript css html puros </p>
                 </div>
             </div>
                 
@@ -56,6 +84,12 @@
     </section>
     
 
-    <script src="index.css"></script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration:1000,
+        });
+    </script>
 </body>
 </html>
