@@ -91,11 +91,18 @@ h1 {
   margin-left: 2rem;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 740px) {
   img {
     width: 20rem;
     height: 20rem;
     margin-left: 1.5rem;
+  }
+  #principalimg{
+    position: relative;
+    top: 5rem;
+    left: -1rem;
+    width: 20rem;
+    height: 15rem;
   }
   .root {
     display: grid;
@@ -111,16 +118,16 @@ h1 {
     display: grid;
     grid-template-columns: 1fr;
   }
-  .letters {
+  #letters {
     position: absolute;
-    left: -50px;
     top: 10rem;
+    left: -3rem;
     margin-top: 10rem;
     padding-left: 50px;
     padding-bottom: 30px;
     display: flex;
     overflow: hidden;
-    font-size: 18px;
+    font-size: 10px;
     width: 40rem;
     height: 100px;
     text-align: center;
