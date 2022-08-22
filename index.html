@@ -1,102 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
     <section class="root">
-        <div class="cont-image">
-            <img src="" alt="" class="show-image">
-            <i class="fas fa-times x"></i>
+      <div class="cont-image">
+        <img src="" alt="" class="show-image" />
+        <i class="fas fa-times x"></i>
+      </div>
+      <div class="contain">
+        <img src="./img/leo.jpeg" class="principalimg" alt="leo" />
+        <div class="content">
+          <div class="letters">
+            <h1>Leonardo</h1>
+            <ul>
+              <li>Autodidacta</li>
+              <li>Programador</li>
+              <li>entusiasta</li>
+            </ul>
+          </div>
+          <p class="espe">
+            Estudiante auto didacta, en la ciencia de datos y otros campos,
+            manejo de lenguajes de programacion, python, javascript, Sql,
+            Conocimientos en: Css, Html,librerias: Pyqt, Django, Pandas
+          </p>
+          <div class="contacto" id="contacto">
+            <h1 class="contact">Contactame</h1>
+            <div><a href="tel:+573502117928">Numero telefonico</a></div>
+            <div><a href="https://github.com/leonardo2322">Perfil de github</a></div>
+            <div><a href="mailto:joys23services@gmail.com?Subject=hola%leonardo%queremos%contactarte">Enviame un correo</a></div>
+          </div>
+          <div class="enlaces">
+            <h1 class="titlelink">Enlaces de Proyectos</h1>
+            <a href="https://leonardo2322.github.io/tiquetera/"
+              >tiquetera Para delicias de ama</a
+            >
+          </div>
+          <div>
+            <a href="https://leonardo2322.github.io/ferreElectricos/"
+              >Catalogo de codigos Para ferreElectricos san luis</a
+            >
+          </div>
+          <div>
+            <a href="https://leonardo2322.github.io/mukata/"
+              >Catalogo Para restaurante version de prueba 1</a
+            >
+          </div>
+          <div>
+            <a href="https://leonardo2322.github.io/paper/"
+              >Catalogo empresa technologica</a
+            >
+          </div>
+          <div>
+            <a href="https://gaboprogramers.github.io/tu_cuido_a_la_mano/index.html"
+              >catologo para empresa de cuido</a
+            >
+          </div>
+          <div>
+            <a href="https://leonardo2322.github.io/cartaDigital/"
+              >catologo para Pachocombos por terminar</a
+            >
+          </div>
+          <div>
+            <a href="https://leonardo2322.github.io/NewRachel/"
+              >catologo para tienda de ropa</a
+            >
+          </div>
+          
         </div>
-        <div class="contain">
-            <img src="./img/leo.jpeg" class="principalimg" alt="leo">
-            <div class="content">
-                <div class="letters">
-                    <h1>Leonardo</h1>
-                    <ul>
-                        <li>Autodidacta</li>
-                        <li>Programador</li>
-                        <li>entusiasta</li>
-                    </ul>
-                    
-                </div>
-                <p class="espe">Estudiante auto didacta, en la ciencia de datos y otros campos, manejo de lenguajes de programacion, python, javascript, Sql, Conocimientos en: Css, Html,librerias: Pyqt, Django, Pandas</p>
 
+        <div class="works">
+          <div class="atom-spinner">
+            <div class="spinner-inner">
+              <div class="spinner-line"></div>
+              <div class="spinner-line"></div>
+              <div class="spinner-line"></div>
+              <!--Chrome renders little circles malformed :(-->
+              <div class="spinner-circle">&#9679;</div>
             </div>
-            
-            <div class="works" >
-                <div class="atom-spinner" >
-                    <div class="spinner-inner">
-                      <div class="spinner-line"></div>
-                      <div class="spinner-line"></div>
-                      <div class="spinner-line"></div>
-                      <!--Chrome renders little circles malformed :(-->
-                      <div class="spinner-circle">
-                        &#9679;
-                    </div>
-                </div>
-            </div>
+          </div>
 
-                <div data-aos="fade-up">
-                    <h1>Trabajos</h1>
-                    <h1>Sistemas Linux</h1>
-                    <img class="img" src="./img/ArcoLinux_2022-08-12_08-51-10.png" alt="alt">
-                    <img class="img" src="./img/ArcoLinux_2022-08-12_08-52-26.png" alt="">
-                    <p>Manejo de la linea de comandos de linux, bash, solucion de problemas, manejo de ficheros scripts, instalacion de sistemas linux: como arch, debian,ubuntu </p>
-                </div>
-                <div data-aos="fade-up"
-                data-aos-anchor-placement="center-center">
-                    <h1>Proyectos</h1>
-                    <h1>Gui interfaz de usuario con Pyqt</h1>
-                    <img class="img" src="./img/evafoto.png" alt="alt">
-                    <img class="img" src="./img/design.png" alt="">
-                    <img class="img" src="./img/imagensoloEjecucion.png" alt="">
-                    <p>Creaciom de una interfaz grafica para el manejo administrativo de un restaurante para aprender el manejo del crud, utilizacion de qtdesign,qtcretor,y la libreria de python Pyqt </p>
-                </div>
-                <div data-aos="fade-up"
-                data-aos-anchor-placement="center-center">
-                    <h1>Diseño Adobe Ilustrator</h1>
-                    <img class="img" src="./img/IMG-20210510-WA0065.jpg" alt="alt">
-                    <img class="img" src="./img/IMG-20220228-WA0028.jpg" alt="">
-                    <img class="img" src="./img/IMG-20220315-WA0033.jpg" alt="">
-                    <img class="img" src="./img/IMG-20220420-WA0027.jpg" alt="">
-                    <p>diseño de logos edicion de fotos, esto se realizo con el fin de aprender la creacion de logos y con fines lucrativos </p>
-                </div>
+          <div data-aos="fade-up">
+            <h1>Trabajos</h1>
+            <h1>Sistemas Linux</h1>
+            <img
+              class="img"
+              src="./img/ArcoLinux_2022-08-12_08-51-10.png"
+              alt="alt"
+            />
+            <img
+              class="img"
+              src="./img/ArcoLinux_2022-08-12_08-52-26.png"
+              alt=""
+            />
+            <p>
+              Manejo de la linea de comandos de linux, bash, solucion de
+              problemas, manejo de ficheros scripts, instalacion de sistemas
+              linux: como arch, debian,ubuntu
+            </p>
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="center-center">
+            <h1>Proyectos</h1>
+            <h1>Gui interfaz de usuario con Pyqt</h1>
+            <img class="img" src="./img/evafoto.png" alt="alt" />
+            <img class="img" src="./img/design.png" alt="" />
+            <img class="img" src="./img/imagensoloEjecucion.png" alt="" />
+            <p>
+              Creaciom de una interfaz grafica para el manejo administrativo de
+              un restaurante para aprender el manejo del crud, utilizacion de
+              qtdesign,qtcretor,y la libreria de python Pyqt
+            </p>
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="center-center">
+            <h1>Diseño Adobe Ilustrator</h1>
+            <img class="img" src="./img/IMG-20210510-WA0065.jpg" alt="alt" />
+            <img class="img" src="./img/IMG-20220228-WA0028.jpg" alt="" />
+            <img class="img" src="./img/IMG-20220315-WA0033.jpg" alt="" />
+            <img class="img" src="./img/IMG-20220420-WA0027.jpg" alt="" />
+            <p>
+              diseño de logos edicion de fotos, esto se realizo con el fin de
+              aprender la creacion de logos y con fines lucrativos
+            </p>
+          </div>
 
-                <div data-aos="zoom-in">
-                    <h1>Catalogos Digitales</h1>
-                    <img class="img" src="./img/ferre.png" alt="alt">
-                    <img class="img" src="./img/ferree.png" alt="">
-                    <img class="img" src="./img/catalogo.png" alt="" >
-                    <img class="img" src="./img/cuidoalamano.png" alt="">
-                    <img class="img" src="./img/cuido.png" alt="">
-                    <img class="img" src="./img/lamuka.png" alt="">
-                    <img class="img" src="./img/mukata.png" alt="">
-                    <img class="img" src="./img/mensajecuido.jpg" alt="">
-                    <p>Cartas digitales para la innovacion de las pequeñas empresas en la muestra de sus productos y llegar a mas clientes, se diseño con javascript css html puros </p>
-                </div>
-            </div>
-                
+          <div data-aos="zoom-in">
+            <h1>Catalogos Digitales</h1>
+            <img class="img" src="./img/ferre.png" alt="alt" />
+            <img class="img" src="./img/ferree.png" alt="" />
+            <img class="img" src="./img/catalogo.png" alt="" />
+            <img class="img" src="./img/cuidoalamano.png" alt="" />
+            <img class="img" src="./img/cuido.png" alt="" />
+            <img class="img" src="./img/lamuka.png" alt="" />
+            <img class="img" src="./img/mukata.png" alt="" />
+            <img class="img" src="./img/mensajecuido.jpg" alt="" />
+            <p>
+              Cartas digitales para la innovacion de las pequeñas empresas en la
+              muestra de sus productos y llegar a mas clientes, se diseño con
+              javascript css html puros
+            </p>
+          </div>
         </div>
+      </div>
     </section>
-    
 
     <script src="index.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration:1000,
-            once:true
-        });
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
     </script>
-</body>
+
+
+  </body>
 </html>
