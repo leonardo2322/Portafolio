@@ -5,76 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="SCS.SCSS" />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   </head>
   <body>
-    <section class="root">
-      <div class="cont-image">
+    <canvas id="particle-canvas"></canvas>
+
+    <section class="root d-flex justify-content-center">
+   
+      <div class="cont-image container">
         <img src="" alt="" class="show-image" />
         <i class="fas fa-times x"></i>
       </div>
       <div class="contain">
-        <img src="./img/leo-removebg-preview.png" class="principalimg" id="principalimg" alt="leo" />
+        <img src="./img" class="principalimg" id="principalimg" alt="leo" />
         <div class="content">
           <div class="letters" id="letters">
             <h1>Leonardo</h1>
             <ul>
-              <li>Autodidacta</li>
-              <li>Programador</li>
-              <li>entusiasta</li>
+              <li>Bienvenido</li>
+              <li>Mi/Portafolio</li>
+              <li>Desarrollo</li>
             </ul>
           </div>
-          <p class="espe">
-            Estudiante auto didacta, en la ciencia de datos y otros campos,
-            manejo de lenguajes de programacion, python, javascript, Sql,
-            Conocimientos en: Css, Html,librerias: Pyqt, Django, Pandas
-          </p>
+          <div class="d-flex contain mb-2">
+            <img src="/img/leo.png" alt="svg-leo" class="" style="width: 4rem; height: auto;">
+
+            <p class="espe">
+              Estudiante auto didacta, en la ciencia de datos y otros campos,
+              manejo de lenguajes de programacion, python, javascript, Sql,
+              Conocimientos en: Css, Html,librerias: Pyqt, Django, Pandas
+            </p>
+
+          </div>
+
+        
+     
           <div class="contacto" id="contacto">
             <h1 class="contact">Contactame</h1>
-            <div><a href="tel:+573502117928">Numero telefonico</a></div>
-            <div><a href="https://github.com/leonardo2322">Perfil de github</a></div>
-            <div><a href="mailto:joys23services@gmail.com?Subject=hola%leonardo%queremos%contactarte">Enviame un correo</a></div>
-          </div>
+            <div><a href="tel:+573502117928" class="btn ">Numero telefonico</a></div>
+            <div><a href="https://github.com/leonardo2322" class="btn">Perfil de github</a></div>
+            <div><a href="mailto:joys23services@gmail.com?Subject=hola%leonardo%queremos%contactarte" class="btn">Enviame un correo</a></div>
+       
           <div class="enlaces">
             <h1 class="titlelink">Enlaces de Proyectos</h1>
             <a href="https://leonardo2322.github.io/tiquetera/"
-              >tiquetera Para delicias de ama</a
+              class="btn">tiquetera Para delicias de ama</a
             >
           </div>
           <div>
             <a href="https://leonardo2322.github.io/ferreElectricos/"
-              >Catalogo de codigos Para ferreElectricos san luis</a
+            class="btn">Catalogo de codigos Para ferreElectricos san luis</a
             >
           </div>
           <div>
             <a href="https://leonardo2322.github.io/mukata/"
-              >Catalogo Para restaurante version de prueba 1</a
+            class="btn">Catalogo Para restaurante version de prueba 1</a
             >
           </div>
           <div>
             <a href="https://leonardo2322.github.io/paper/"
-              >Catalogo empresa technologica</a
+            class="btn">Catalogo empresa technologica</a
             >
           </div>
           <div>
             <a href="https://gaboprogramers.github.io/tu_cuido_a_la_mano/index.html"
-              >catologo para empresa de cuido</a
+            class="btn">catologo para empresa de cuido</a
             >
           </div>
           <div>
             <a href="https://leonardo2322.github.io/cartaDigital/"
-              >catologo para Pachocombos por terminar</a
+            class="btn">catologo para Pachocombos por terminar</a
             >
           </div>
           <div>
             <a href="https://leonardo2322.github.io/NewRachel/"
-              >catologo para tienda de ropa</a
+            class="btn">catologo para tienda de ropa</a
             >
           </div>
           
@@ -153,15 +167,10 @@
         </div>
       </div>
     </section>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
-    </script>
+   
 
 
   </body>

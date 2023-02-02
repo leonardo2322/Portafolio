@@ -2,22 +2,46 @@
   margin: 0;
   padding: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
+  text-decoration: none;
+}
+html, body {
+  margin: 0;
+}
+
+#particle-canvas {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(10, 10, 50) 0%,rgb(60, 10, 60) 100%);
+  vertical-align: middle;
 }
 body {
-  background-image: url(./img/cool-background.png);
-  overflow-x: none;
+  overflow: hidden;
   width: 100%;
-
+  background-color: #E9F3F1;
+  overflow-x: hidden;
   margin: 0;
 
   padding: 0;
 }
 
 
-
-.root {
-  display: flex;
-  overflow: none;
+a{
+  text-decoration: none;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  width: 15rem;
+  font-size: 15px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all .3s;
+  box-shadow: 6px 6px 12px #c5c5c5,
+              -6px -6px 12px #ffffff;
+}
+a:active{
+  color: #666;
+ box-shadow: inset 4px 4px 12px #c5c5c5,
+             inset -4px -4px 12px #ffffff;
 }
 .contain {
   display: flex;
@@ -49,7 +73,7 @@ h1 {
   padding-bottom: 30px;
   display: flex;
   overflow: hidden;
-  font-size: 60px;
+  font-size: 30px;
   width: 60rem;
   height: 100px;
   text-align: center;
@@ -98,26 +122,15 @@ h1 {
     margin-left: 1.5rem;
   }
   #principalimg{
-    position: relative;
-    top: 5rem;
-    left: -1rem;
-    width: 20rem;
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    width: 15rem;
     height: 15rem;
   }
-  .root {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-content: center;
-  }
-  .contain {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .content {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
+  
+
+
   #letters {
     position: absolute;
     top: 10rem;
@@ -137,7 +150,7 @@ h1 {
     margin-left: -54px;
     padding-left: -10rem;
     list-style: none;
-    font-size: 38px;
+    font-size: 30px;
     width: 30%;
     -webkit-background-clip: text;
     background-clip: unset;
@@ -284,16 +297,13 @@ a {
   cursor: pointer;
   position: relative;
   top: 10rem;
-  margin-bottom: 2rem;
-  margin-top: 15rem;
 }
 .titlelink {
   position: relative;
   top: 10rem;
 }
 p{
-  background-color: rgba(0, 0, 0, 0.3);
-  color: blue;
+  color: #000;
   margin-top: 10px;
   letter-spacing: 1px;
 }
@@ -327,7 +337,7 @@ img{
     padding-bottom: 30px;
     display: flex;
     overflow: hidden;
-    font-size: 18px;
+    font-size: 15px;
     width: 55rem;
     height: 100px;
     text-align: center;
