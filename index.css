@@ -4,21 +4,17 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   text-decoration: none;
 }
-html, body {
-  margin: 0;
-}
 
 #particle-canvas {
   width: 100%;
-  height: 100vh;
+  height: 650px;
   background: linear-gradient(to bottom, rgb(10, 10, 50) 0%,rgb(60, 10, 60) 100%);
   vertical-align: middle;
 }
 body {
-  overflow: hidden;
   width: 100%;
-  background-color: #E9F3F1;
   overflow-x: hidden;
+  background-color: #E9F3F1;
   margin: 0;
 
   padding: 0;
@@ -66,20 +62,17 @@ h1 {
   background-clip: unset;
   -webkit-text-fill-color: #efb810;
 }
-
-.letters {
-  margin-top: 10rem;
-  padding-left: 50px;
-  padding-bottom: 30px;
-  display: flex;
-  overflow: hidden;
-  font-size: 30px;
-  width: 60rem;
-  height: 100px;
-  text-align: center;
-  align-items: center;
-  line-height: 40px;
+.titleName{
+  position: absolute;
+  top: 20rem;
+  left: 5rem;
+  font-size: 1.7rem;
+  color: #fff;
 }
+.titleName::after{
+  content: " a mi portafolio de desarrollador";
+}
+
 .principalimg {
   border-radius: 50%;
   border: 3px double #efb810;
@@ -90,19 +83,18 @@ h1 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
+  margin-top: 0;
   top: 0;
-  margin: 0;
+  left: -100rem;
   padding: 0;
-  transform: translateX(-100%);
-  display: block;
   z-index: 1000;
 }
 .cont-image .x {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position:absolute;
   top: 20px;
-  right: 10px;
+  left: 10px;
   color: #fff;
   justify-items: center;
   align-items: center;
@@ -124,28 +116,18 @@ h1 {
   #principalimg{
     position: absolute;
     top: 0rem;
+    margin-left: 4.5rem;
     left: 0;
     width: 15rem;
     height: 15rem;
   }
   
+p::first-letter{
+  font-weight: bold;
+}
 
 
-  #letters {
-    position: absolute;
-    top: 10rem;
-    left: -3rem;
-    margin-top: 10rem;
-    padding-left: 50px;
-    padding-bottom: 30px;
-    display: flex;
-    overflow: hidden;
-    font-size: 10px;
-    width: 40rem;
-    height: 100px;
-    text-align: center;
-    align-items: center;
-  }
+
   ul {
     margin-left: -54px;
     padding-left: -10rem;
@@ -154,7 +136,7 @@ h1 {
     width: 30%;
     -webkit-background-clip: text;
     background-clip: unset;
-    -webkit-text-fill-color: #efb810;
+    -webkit-text-fill-color: #fff;
     animation: cambiar 7s infinite;
   }
 
@@ -176,7 +158,7 @@ h1 {
   }
 
   .move {
-    transform: translateX(0);
+    left: 0;
   }
 
   .show-image {
@@ -246,6 +228,16 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+
+.footer{
+  background-color: darkmagenta;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .atom-spinner .spinner-line {
   position: absolute;
   width: 100%;
@@ -313,8 +305,13 @@ img{
 .contact{
   position: relative;
   top: 8rem;
+  -webkit-text-fill-color:#000;
 }
-
+#ShowImgModal{
+  width: 90%;
+  height: 80%;
+  margin-right: 2rem;
+}
 @media (max-width:1970px){
   .principalimg{
     width: 30rem;
@@ -328,21 +325,7 @@ img{
     height: auto;
 
   }
-  .letters {
-    position: absolute;
-    left: 100px;
-    top: 14rem;
-    margin-top: 10rem;
-    padding-left: 50px;
-    padding-bottom: 30px;
-    display: flex;
-    overflow: hidden;
-    font-size: 15px;
-    width: 55rem;
-    height: 100px;
-    text-align: center;
-    align-items: center;
-  }
+
   .espe{
     position: relative;
     top: 8rem;
@@ -369,14 +352,4 @@ img{
     text-align: center;
   }
 }
-/* @keyframes cambiar2 {
-    0% {margin-top: 0;}
-    20%{margin-top: 0;}
-    25%{margin-top: -40px;}
-    50%{margin-top:-40px;}
-    55%{margin-top: -80px;}
-    80%{margin-top: -80px;}
-    85%{margin-top: -40px;}
-    95%{margin-top: -40px;}
-    100%{margin-top: 0;}
-} */
+

@@ -7,7 +7,6 @@
     <title>Portafolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="SCS.SCSS" />
     
     <link
       rel="stylesheet"
@@ -18,39 +17,37 @@
   </head>
   <body>
     <canvas id="particle-canvas"></canvas>
-
+    <span class="titleName">Bienvenido!</span>
+    <div class="cont-image container d-flex justify-content-center align-items-center">
+      <img src="" alt="" class="show-image img-fluid" id="ShowImgModal" />
+      <i class="fas fa-times x"></i>
+    </div>
     <section class="root d-flex justify-content-center">
    
-      <div class="cont-image container">
-        <img src="" alt="" class="show-image" />
-        <i class="fas fa-times x"></i>
-      </div>
+   
       <div class="contain">
-        <img src="./img" class="principalimg" id="principalimg" alt="leo" />
+        <img src="./img/perfil/profile-pic (2).png" class="principalimg" id="principalimg" alt="leo" />
         <div class="content">
-          <div class="letters" id="letters">
-            <h1>Leonardo</h1>
-            <ul>
-              <li>Bienvenido</li>
-              <li>Mi/Portafolio</li>
-              <li>Desarrollo</li>
-            </ul>
-          </div>
-          <div class="d-flex contain mb-2">
-            <img src="/img/leo.png" alt="svg-leo" class="" style="width: 4rem; height: auto;">
+    
+          <div class="d-block container  mb-2">
+            <p>Hola gracias por visitar te hablare de mi, me considero una persona curiosa aventurera y energetica,
+              me gustan mucho las computadoras desde muy temprana edad y la technologia me fascina ya que esta es mi pasion le coloco mucho empeño en aprender trabajo el tiempo que sea necesario para aprender lo que se necesite no soy muy apegado a lo material desde siempre e tenido poco y gracias a esto soy muy recursivo un ejemplo seria que no he podido comprar un computador de alta gama entonces me toco al antiguo que tengo hacer que funcione con todas las versiones de programas a dia de hoy aprendiendo linux editar ficheros de configuracion y muchas cosas mas llegando hasta a personalizarlo a mi estilo. padre de dos hermosos niños y migrante en Colombia, Venezolano joven 26 años con muchas ganas de volverme un gran programador
+            </p>
+            <img src="./img/presentando.svg" alt="svg-leo" class="" style="width: 4rem; height: auto;">
 
             <p class="espe">
               Estudiante auto didacta, en la ciencia de datos y otros campos,
               manejo de lenguajes de programacion, python, javascript, Sql,
-              Conocimientos en: Css, Html,librerias: Pyqt, Django, Pandas
+              Conocimientos en: Css, Html,librerias: Pyqt, Django, Pandas, React  otros: bootstrap
             </p>
 
           </div>
 
         
      
-          <div class="contacto" id="contacto">
+          <div class="contacto container" id="contacto">
             <h1 class="contact">Contactame</h1>
+            <img src="./img/social.svg" alt="social" class="img-fluid mb-0 mt-2">
             <div><a href="tel:+573502117928" class="btn ">Numero telefonico</a></div>
             <div><a href="https://github.com/leonardo2322" class="btn">Perfil de github</a></div>
             <div><a href="mailto:joys23services@gmail.com?Subject=hola%leonardo%queremos%contactarte" class="btn">Enviame un correo</a></div>
@@ -91,6 +88,11 @@
             class="btn">catologo para tienda de ropa</a
             >
           </div>
+          <div>
+            <a href="https://leonardo2322.github.io/Catalogo/"
+            class="btn">catologo editable con bootstrap en el diseño</a
+            >
+          </div>
           
         </div>
 
@@ -107,14 +109,15 @@
 
           <div data-aos="fade-up">
             <h1>Trabajos</h1>
+            <img src="./img/creacion.svg" alt="creacion" style="width: 70px;">
             <h1>Sistemas Linux</h1>
             <img
-              class="img"
+              class="img img-fluid"
               src="./img/ArcoLinux_2022-08-12_08-51-10.png"
               alt="alt"
             />
             <img
-              class="img"
+              class="img img-fluid"
               src="./img/ArcoLinux_2022-08-12_08-52-26.png"
               alt=""
             />
@@ -127,21 +130,21 @@
           <div data-aos="fade-up" data-aos-anchor-placement="center-center">
             <h1>Proyectos</h1>
             <h1>Gui interfaz de usuario con Pyqt</h1>
-            <img class="img" src="./img/evafoto.png" alt="alt" />
-            <img class="img" src="./img/design.png" alt="" />
-            <img class="img" src="./img/imagensoloEjecucion.png" alt="" />
+            <img class="img img-fluid" src="./img/evafoto.png" alt="alt" />
+            <img class="img img-fluid" src="./img/design.png" alt="" />
+            <img class="img img-fluid" src="./img/imagensoloEjecucion.png" alt="" />
             <p>
-              Creaciom de una interfaz grafica para el manejo administrativo de
+              Creacion de una interfaz grafica para el manejo administrativo de
               un restaurante para aprender el manejo del crud, utilizacion de
               qtdesign,qtcretor,y la libreria de python Pyqt
             </p>
           </div>
           <div data-aos="fade-up" data-aos-anchor-placement="center-center">
             <h1>Diseño Adobe Ilustrator</h1>
-            <img class="img" src="./img/IMG-20210510-WA0065.jpg" alt="alt" />
-            <img class="img" src="./img/IMG-20220228-WA0028.jpg" alt="" />
-            <img class="img" src="./img/IMG-20220315-WA0033.jpg" alt="" />
-            <img class="img" src="./img/IMG-20220420-WA0027.jpg" alt="" />
+            <img class="img img-fluid" src="./img/IMG-20210510-WA0065.jpg" alt="alt" />
+            <img class="img img-fluid" src="./img/IMG-20220228-WA0028.jpg" alt="" />
+            <img class="img img-fluid" src="./img/IMG-20220315-WA0033.jpg" alt="" />
+            <img class="img img-fluid" src="./img/IMG-20220420-WA0027.jpg" alt="" />
             <p>
               diseño de logos edicion de fotos, esto se realizo con el fin de
               aprender la creacion de logos y con fines lucrativos
@@ -150,14 +153,14 @@
 
           <div data-aos="zoom-in">
             <h1>Catalogos Digitales</h1>
-            <img class="img" src="./img/ferre.png" alt="alt" />
-            <img class="img" src="./img/ferree.png" alt="" />
-            <img class="img" src="./img/catalogo.png" alt="" />
-            <img class="img" src="./img/cuidoalamano.png" alt="" />
-            <img class="img" src="./img/cuido.png" alt="" />
-            <img class="img" src="./img/lamuka.png" alt="" />
-            <img class="img" src="./img/mukata.png" alt="" />
-            <img class="img" src="./img/mensajecuido.jpg" alt="" />
+            <img class="img img-fluid" src="./img/ferre.png" alt="alt" />
+            <img class="img img-fluid" src="./img/ferree.png" alt="" />
+            <img class="img img-fluid" src="./img/catalogo.png" alt="" />
+            <img class="img img-fluid" src="./img/cuidoalamano.png" alt="" />
+            <img class="img img-fluid" src="./img/cuido.png" alt="" />
+            <img class="img img-fluid" src="./img/lamuka.png" alt="" />
+            <img class="img img-fluid" src="./img/mukata.png" alt="" />
+            <img class="img img-fluid" src="./img/mensajecuido.jpg" alt="" />
             <p>
               Cartas digitales para la innovacion de las pequeñas empresas en la
               muestra de sus productos y llegar a mas clientes, se diseño con
@@ -166,6 +169,20 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="footer">
+      <div class="row">
+        <h1 >Sociales</h1>
+
+          <div class="col"> <a href="https://leonardo2322.github.io/Catalogo/"
+            class="btn">Facebook</a
+            ></div>
+          <div class="col"></div>
+          <div class="col"></div>
+      </div>
+   
+  
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="index.js"></script>

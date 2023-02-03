@@ -59,7 +59,7 @@ function moveParticle(particle, canvas, time) {
 
 function drawParticle(particle, canvas, ctx) {
   canvas = document.getElementById('particle-canvas');
-  const vh = canvas.height / 100;
+  const vh = canvas.height / 50;
 
   ctx.fillStyle = particle.colour;
   ctx.beginPath();
