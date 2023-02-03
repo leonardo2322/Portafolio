@@ -8,20 +8,23 @@
 #particle-canvas {
   width: 100%;
   height: 650px;
-  background: linear-gradient(to bottom, rgb(10, 10, 50) 0%,rgb(60, 10, 60) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgb(10, 10, 50) 0%,
+    rgb(60, 10, 60) 100%
+  );
   vertical-align: middle;
 }
 body {
   width: 100%;
   overflow-x: hidden;
-  background-color: #E9F3F1;
+  background-color: #e9f3f1;
   margin: 0;
 
   padding: 0;
 }
 
-
-a{
+a {
   text-decoration: none;
   color: #090909;
   padding: 0.7em 1.7em;
@@ -30,14 +33,12 @@ a{
   border-radius: 0.5em;
   background: #e8e8e8;
   border: 1px solid #e8e8e8;
-  transition: all .3s;
-  box-shadow: 6px 6px 12px #c5c5c5,
-              -6px -6px 12px #ffffff;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
 }
-a:active{
+a:active {
   color: #666;
- box-shadow: inset 4px 4px 12px #c5c5c5,
-             inset -4px -4px 12px #ffffff;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
 }
 .contain {
   display: flex;
@@ -62,14 +63,14 @@ h1 {
   background-clip: unset;
   -webkit-text-fill-color: #efb810;
 }
-.titleName{
+.titleName {
   position: absolute;
   top: 20rem;
   left: 5rem;
   font-size: 1.7rem;
   color: #fff;
 }
-.titleName::after{
+.titleName::after {
   content: " a mi portafolio de desarrollador";
 }
 
@@ -92,7 +93,7 @@ h1 {
 .cont-image .x {
   display: flex;
   flex-direction: column;
-  position:absolute;
+  position: absolute;
   top: 20px;
   left: 10px;
   color: #fff;
@@ -113,7 +114,7 @@ h1 {
     height: 20rem;
     margin-left: 1.5rem;
   }
-  #principalimg{
+  #principalimg {
     position: absolute;
     top: 0rem;
     margin-left: 4.5rem;
@@ -121,12 +122,10 @@ h1 {
     width: 15rem;
     height: 15rem;
   }
-  
-p::first-letter{
-  font-weight: bold;
-}
 
-
+  p::first-letter {
+    font-weight: bold;
+  }
 
   ul {
     margin-left: -54px;
@@ -228,11 +227,30 @@ p::first-letter{
   transform: translate(-50%, -50%);
 }
 
+.footer {
+  background: hsla(285, 93%, 32%, 1);
 
-.footer{
-  background-color: darkmagenta;
+  background: linear-gradient(
+    90deg,
+    hsla(285, 93%, 32%, 1) 35%,
+    hsla(310, 64%, 40%, 1) 80%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(285, 93%, 32%, 1) 35%,
+    hsla(310, 64%, 40%, 1) 80%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(285, 93%, 32%, 1) 35%,
+    hsla(310, 64%, 40%, 1) 80%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#79069F", endColorstr="#A92593", GradientType=1 );
   width: 100%;
-  height: 400px;
+  height: 370px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -288,45 +306,44 @@ p::first-letter{
 a {
   cursor: pointer;
   position: relative;
-  top: 10rem;
+  /* top: 10rem; */
 }
 .titlelink {
   position: relative;
-  top: 10rem;
+  top: 2rem;
 }
-p{
+p {
   color: #000;
   margin-top: 10px;
   letter-spacing: 1px;
 }
-img{
+img {
   margin-bottom: 5rem;
 }
-.contact{
+.contact {
   position: relative;
   top: 8rem;
-  -webkit-text-fill-color:#000;
+  -webkit-text-fill-color: #000;
 }
-#ShowImgModal{
+#ShowImgModal {
   width: 90%;
   height: 80%;
   margin-right: 2rem;
 }
-@media (max-width:1970px){
-  .principalimg{
+@media (max-width: 1970px) {
+  .principalimg {
     width: 30rem;
-    height: 23rem ;
+    height: 23rem;
     position: relative;
     left: 25rem;
   }
 
-  img{
+  img {
     width: 60%;
     height: auto;
-
   }
 
-  .espe{
+  .espe {
     position: relative;
     top: 8rem;
   }
@@ -352,4 +369,3 @@ img{
     text-align: center;
   }
 }
-
