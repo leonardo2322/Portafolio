@@ -37,10 +37,8 @@ coverage.xml
 */migrations/*
 
 # Static files
-/static/
 # You can also ignore specific files in static
 # /static/js/
-/static/css/
 
 # Media files
 /media/
