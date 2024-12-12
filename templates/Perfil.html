@@ -1,0 +1,191 @@
+{% extends "Base.html" %} {% load static %} {% block content %}
+<div class="max-w-4xl mx-auto py-10">
+  <!-- Título principal estilo Google -->
+  <div class="text-center mb-6">
+    <h1 class="text-6xl font-bold">
+      <span class="text-blue-500">L</span>
+      <span class="text-red-500">e</span>
+      <span class="text-red-500">o</span>
+      <span class="text-yellow-500">n</span>
+      <span class="text-yellow-500">a</span>
+      <span class="text-yellow-500">r</span>
+      <span class="text-yellow-500">d</span>
+      <span class="text-yellow-500">o</span>
+
+      <span class="text-blue-500">M</span>
+      <span class="text-green-500">e</span>
+      <span class="text-green-500">n</span>
+      <span class="text-red-500">d</span>
+      <span class="text-red-500">ez</span>
+    </h1>
+  </div>
+  <div class="flex justify-between p-4">
+    <a
+      href="#"
+      class="text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
+    >
+      Todo
+    </a>
+    <a
+      href="#"
+      class="text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
+    >
+      Proyectos
+    </a>
+    <a
+      href="#"
+      class="text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
+    >
+      Technologias
+    </a>
+    <a
+      href="#"
+      class="text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
+    >
+      Contacto
+    </a>
+    <a
+      href="#"
+      class="text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
+    >
+      sobre mi
+    </a>
+  </div>
+
+  <!-- Barra de búsqueda -->
+  <div class="flex items-center p-5 mb-10 space-x-4">
+    <input
+      type="text"
+      class="w-2/3 px-4 py-2 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring focus:ring-blue-300"
+      placeholder="Buscar en Leonardo Mendez..."
+    />
+    <span>
+      <svg class="w-6 h-6 text-blue-500">
+        <path
+          class="fill-current text-blue-500"
+          d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"
+        ></path>
+        <path
+          class="fill-current text-green-500"
+          d="m11 18.08h2v3.92h-2z"
+        ></path>
+        <path
+          class="fill-current text-yellow-500"
+          d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z"
+        ></path>
+        <path
+          class="fill-current text-red-500"
+          d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"
+        ></path>
+      </svg>
+    </span>
+
+    <!-- Segundo ícono -->
+    <span>
+      <svg
+        class="w-6 h-6"
+        focusable="false"
+        viewBox="0 0 192 192"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect fill="none" height="192" width="192"></rect>
+        <g>
+          <circle fill="#34a853" cx="144.07" cy="144" r="16"></circle>
+          <circle fill="#4285f4" cx="96.07" cy="104" r="24"></circle>
+          <path
+            fill="#ea4335"
+            d="M24,135.2c0,18.11,14.69,32.8,32.8,32.8H96v-16l-40.1-0.1c-8.8,0-15.9-8.19-15.9-17.9v-18H24V135.2z"
+          ></path>
+          <path
+            fill="#fbbc04"
+            d="M168,72.8c0-18.11-14.69-32.8-32.8-32.8H116l20,16c8.8,0,16,8.29,16,18v30h16V72.8z"
+          ></path>
+          <path
+            fill="#4285f4"
+            d="M112,24l-32,0L68,40H56.8C38.69,40,24,54.69,24,72.8V92h16V74c0-9.71,7.2-18,16-18h80L112,24z"
+          ></path>
+        </g>
+      </svg>
+    </span>
+    <span class="text-blue-500">
+      <svg
+        class="w-6 h-6 text-blue-500"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+        ></path>
+      </svg>
+    </span>
+  </div>
+
+  <!-- Contenido principal -->
+  <div
+    class="grid bg-gray-700 p-4 grid-cols-1 md:grid-cols-3 gap-6 border-b-2 border-gray-300 rounded"
+  >
+    <!-- Resultados de búsqueda -->
+    {% block search %}
+    <div class="md:col-span-2 space-y-6">
+      <div class="bg-gray-600 p-4 shadow rounded">
+        <a href="#">
+          <h2 class="text-yellow-500 underline font-bold text-blue-700">
+            Leonardo Mendez - Biografía
+          </h2>
+        </a>
+
+        <p class="text-white">
+          Leonardo José Araujo Méndez es un apasionado de la tecnología y la
+          programación, dedicado a la creación de soluciones innovadoras.
+        </p>
+      </div>
+      <div class="bg-gray-600 p-4 shadow rounded">
+        <a href="#">
+          <h2 class="text-lg underline font-bold text-yellow-500">
+            Proyectos destacados
+          </h2>
+        </a>
+
+        <p class="text-white">
+          Explora los proyectos de desarrollo web y aplicaciones que ha creado
+          Leonardo, incluyendo sistemas con Django y Docker.
+        </p>
+      </div>
+    </div>
+
+    <!-- Panel derecho con imagen e información -->
+    <div class="bg-gray-600 p-4 shadow rounded">
+      <img
+        src="{% static 'img/leo.jpg' %}"
+        alt="Leonardo Mendez"
+        class="rounded mb-4"
+      />
+      <h2 class="text-yellow-500 font-bold">Información destacada</h2>
+      <ul class="list-disc list-inside text-white list-none space-y-2">
+        <li class="text-2xl">
+          <strong>Programador:</strong>
+          Backend
+        </li>
+        <li>
+          <strong>Habilidades blandas:</strong>
+          <br />
+          - Comunicación Efectiva
+          <br />
+          - Trabajo en Equipo
+          <br />
+          - Pensamiento Crítico y Resolución de Problemas
+          <br />
+          - Aprendizaje Continuo
+        </li>
+        <li>
+          <strong>Intereses:</strong>
+          Tecnología, filosofía, y educación
+        </li>
+      </ul>
+    </div>
+  </div>
+  {% endblock search %}
+</div>
+{% endblock content %}
