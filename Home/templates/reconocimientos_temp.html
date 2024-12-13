@@ -1,0 +1,27 @@
+{% extends "Perfil.html" %}
+
+{% block search %}
+ {% for reconocimiento in reconocimientos %}
+ <div class="md:col-span-2 space-y-6">
+      <div class="bg-gray-600 p-4 shadow rounded">
+        <a href="{{ reconocimiento.enlace }}">
+          <h2 class="text-yellow-500 underline font-bold text-blue-700">
+            {{ reconocimiento.titulo }}
+          </h2>
+        </a>
+
+        <p class="text-white">
+          {{ reconocimiento.Descripcion }}
+        </p>
+      </div>
+     
+    </div>
+ 
+ 
+ {% endfor %}
+
+
+{% endblock search %}
+
+
+

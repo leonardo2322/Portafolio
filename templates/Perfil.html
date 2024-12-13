@@ -21,34 +21,34 @@
   </div>
   <div class="flex justify-between p-4">
     <a
-      href="#"
-      class="text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
+      href="{% url 'portafolio' %}"
+      class="enlaces text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
     >
       Todo
     </a>
     <a
-      href="#"
-      class="text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
+      href="{% url 'Proyectos' %}"
+      class="enlaces text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
     >
       Proyectos
     </a>
     <a
-      href="#"
-      class="text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
+      href="{% url 'tech' %}"
+      class="enlaces text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
     >
       Technologias
     </a>
     <a
-      href="#"
-      class="text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
+      href="{% url 'contacto' %}"
+      class="enlaces text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
     >
       Contacto
     </a>
     <a
-      href="#"
-      class="text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
+      href="{% url 'reconocimientos' %}"
+      class="enlaces text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center"
     >
-      sobre mi
+      Reconocimientos
     </a>
   </div>
 
@@ -56,7 +56,7 @@
   <div class="flex items-center p-5 mb-10 space-x-4">
     <input
       type="text"
-      class="w-2/3 px-4 py-2 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring focus:ring-blue-300"
+      class="w-2/3 bg-blue-200 px-4 py-2 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring focus:ring-blue-300"
       placeholder="Buscar en Leonardo Mendez..."
     />
     <span>
@@ -123,69 +123,97 @@
   </div>
 
   <!-- Contenido principal -->
+  {% if eliminar_div == True %}
   <div
-    class="grid bg-gray-700 p-4 grid-cols-1 md:grid-cols-3 gap-6 border-b-2 border-gray-300 rounded"
+    class="flex bg-gray-700 p-4 flex-col min-h-screen gap-6 border-b-2 border-gray-300 rounded"
   >
-    <!-- Resultados de búsqueda -->
-    {% block search %}
-    <div class="md:col-span-2 space-y-6">
-      <div class="bg-gray-600 p-4 shadow rounded">
-        <a href="#">
-          <h2 class="text-yellow-500 underline font-bold text-blue-700">
-            Leonardo Mendez - Biografía
-          </h2>
-        </a>
+    {% else %}
+    <div
+      class="grid bg-gray-700 p-4 grid-cols-1 md:grid-cols-3 min-h-screen gap-6 border-b-2 border-gray-300 rounded"
+    >
+      {% endif %}
 
-        <p class="text-white">
-          Leonardo José Araujo Méndez es un apasionado de la tecnología y la
-          programación, dedicado a la creación de soluciones innovadoras.
-        </p>
+      <!-- Resultados de búsqueda -->
+      {% block search %}
+      <div class="md:col-span-2 space-y-6">
+        <div class="bg-gray-600 p-4 shadow rounded">
+          <a href="#">
+            <h2 class="text-yellow-500 underline font-bold text-blue-700">
+              Leonardo Mendez - Reconocimientos
+            </h2>
+          </a>
+
+          <p class="text-white">
+            Leonardo José Araujo Méndez es un apasionado de la tecnología y la
+            programación, dedicado a la creación de soluciones innovadoras.
+          </p>
+        </div>
+        <div class="bg-gray-600 p-4 shadow rounded">
+          <a href="{% url 'Proyectos' %}">
+            <h2 class="text-lg underline font-bold text-yellow-500">
+              Proyectos
+            </h2>
+          </a>
+
+          <p class="text-white">
+            Explora los proyectos de desarrollo web y aplicaciones que ha creado
+            Leonardo, incluyendo sistemas con Django y Docker.
+          </p>
+        </div>
       </div>
-      <div class="bg-gray-600 p-4 shadow rounded">
-        <a href="#">
-          <h2 class="text-lg underline font-bold text-yellow-500">
-            Proyectos destacados
-          </h2>
-        </a>
 
-        <p class="text-white">
-          Explora los proyectos de desarrollo web y aplicaciones que ha creado
-          Leonardo, incluyendo sistemas con Django y Docker.
-        </p>
+      <!-- Panel derecho con imagen e información -->
+      <div class="bg-gray-600 p-4 shadow rounded">
+        <img
+          src="{% static 'img/leo.jpg' %}"
+          alt="Leonardo Mendez"
+          class="rounded mb-4"
+        />
+        <h2 class="text-yellow-500 font-bold">Información destacada</h2>
+        <ul class="list-disc list-inside text-white list-none space-y-2">
+          <li class="text-2xl">
+            <strong>Programador:</strong>
+            Backend
+          </li>
+          <li>
+            <strong class="text-yellow-500">Habilidades blandas:</strong>
+            <br />
+            - Comunicación Efectiva
+            <br />
+            - Trabajo en Equipo
+            <br />
+            - Pensamiento Crítico y Resolución de Problemas
+            <br />
+            - Aprendizaje Continuo
+          </li>
+          <li>
+            <strong class="text-yellow-500">Intereses:</strong>
+            Tecnología, filosofía, y educación
+          </li>
+          <li>
+            <strong class="text-yellow-500">Experiencia:</strong>
+            Aun no cuento con Experiencia Laboral pero sigo aprendiendo por
+            cuenta propia
+          </li>
+          <li>
+            <strong class="text-yellow-500">Formacion:</strong>
+            Cursos y Autodidacta
+          </li>
+        </ul>
       </div>
     </div>
-
-    <!-- Panel derecho con imagen e información -->
-    <div class="bg-gray-600 p-4 shadow rounded">
-      <img
-        src="{% static 'img/leo.jpg' %}"
-        alt="Leonardo Mendez"
-        class="rounded mb-4"
-      />
-      <h2 class="text-yellow-500 font-bold">Información destacada</h2>
-      <ul class="list-disc list-inside text-white list-none space-y-2">
-        <li class="text-2xl">
-          <strong>Programador:</strong>
-          Backend
-        </li>
-        <li>
-          <strong>Habilidades blandas:</strong>
-          <br />
-          - Comunicación Efectiva
-          <br />
-          - Trabajo en Equipo
-          <br />
-          - Pensamiento Crítico y Resolución de Problemas
-          <br />
-          - Aprendizaje Continuo
-        </li>
-        <li>
-          <strong>Intereses:</strong>
-          Tecnología, filosofía, y educación
-        </li>
-      </ul>
-    </div>
+    {% endblock search %}
   </div>
-  {% endblock search %}
+  {% endblock content %} {% block scripting %}
+  <script>
+    const links = document.querySelectorAll(".enlaces");
+    links.forEach((link) => {
+      console.log(link);
+
+      if (link.href === window.location.href) {
+        link.classList.add("border-yellow-500");
+      }
+    });
+  </script>
+  {% endblock scripting %}
 </div>
-{% endblock content %}

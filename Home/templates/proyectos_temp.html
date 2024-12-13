@@ -1,0 +1,30 @@
+{% extends "Perfil.html" %} 
+
+{% block search %} 
+  {% for proyecto in proyectos %}
+  <div
+    class="bg-gray-600 p-4 shadow rounded w-full mb-6 flex items-center justify-between"
+  >
+    <!-- Contenido a la izquierda (Texto) -->
+    <div class="flex-1 pr-4">
+      <a href="{{ proyecto.enlace }}">
+        <h2 class="text-lg underline font-bold text-yellow-500">
+          {{ proyecto.nombre }}
+        </h2>
+      </a>
+      <p class="text-white mt-2">{{ proyecto.detalles }}</p>
+    </div>
+
+    <!-- Imagen a la derecha -->
+    <div class="w-48 h-48 flex-shrink-0">
+      <img
+        src="{{ proyecto.imagen.url }}"
+        class="w-full h-full object-cover rounded"
+        alt="Imagen de {{ item.contacto.titulo }}"
+      />
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+ {% endblock search %}
