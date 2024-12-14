@@ -1,5 +1,5 @@
 services:
-  portafolio_web:
+  web_portafolio:
     build: .
     container_name: web_portafolio
     command: python manage.py runserver 0.0.0.0:8000
@@ -23,14 +23,13 @@ services:
       - static_data:/web/staticfiles
       - media_data:/web/media
     depends_on:
-      - portafolio_web
+      - web_portafolio
     networks:
       - app_network
 
 volumes:
   static_data:
   media_data:
-
   sqlite_data:
 
 networks:

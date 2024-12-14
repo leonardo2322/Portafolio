@@ -10,9 +10,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = env('SECRET_KEY')
 
-DEBUG = env.bool('DEBUG', default=False)
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'nginx_container']
+ALLOWED_HOSTS = ['*']
 
 
 

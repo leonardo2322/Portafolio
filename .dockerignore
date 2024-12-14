@@ -1,0 +1,4 @@
+nginx.conf
+*.pyc
+__pycache__/
+.git/
