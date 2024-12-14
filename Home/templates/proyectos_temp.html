@@ -1,6 +1,5 @@
-{% extends "Perfil.html" %} 
-
-{% block search %} 
+{% extends "Perfil.html" %} {% block search %}
+<div class="p-4 w-full">
   {% for proyecto in proyectos %}
   <div
     class="bg-gray-600 p-4 shadow rounded w-full mb-6 flex items-center justify-between"
@@ -19,7 +18,7 @@
     <div class="w-48 h-48 flex-shrink-0">
       <img
         src="{{ proyecto.imagen.url }}"
-        class="w-full h-full object-cover rounded"
+        class="w-full h-full object-contain rounded"
         alt="Imagen de {{ item.contacto.titulo }}"
       />
     </div>
@@ -27,4 +26,4 @@
   {% endfor %}
 </div>
 
- {% endblock search %}
+{% endblock search %}

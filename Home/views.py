@@ -8,30 +8,29 @@ def home(request):
 
 
 def perfil(request):
-    return render(request,'Perfil.html')
+    context = {
+        'eliminar_div': True
+    }
+    return render(request,'Perfil.html',context)
 
 
 class Proyectos_view(ListView):
     model = Proyecto
     template_name = 'proyectos_temp.html'
     context_object_name = "proyectos"
-    def get_context_data(self, **kwargs) -> dict[str, Any]:
-        context = super().get_context_data(**kwargs)
-        context['eliminar_div'] = True
-        return context
-    
+   
 
 class Reconocimientos_view(ListView):
     model = Reconocimiento
     template_name = 'reconocimientos_temp.html'
     context_object_name = 'reconocimientos'
-
+    
 
 class Technologias_view(ListView):
     model = Technologia
     template_name = 'technologias_temp.html'
     context_object_name = 'technologias'
-
+    paginate_by = 12
 
 class Contacto_view(ListView):
     model = Contacto
@@ -47,6 +46,5 @@ class Contacto_view(ListView):
              }
              for contacto in Contacto.objects.prefetch_related('enlaces')
         ] 
-        context['eliminar_div'] = True
         return context
     

@@ -1,28 +1,79 @@
-{% extends "Perfil.html" %} 
+{% extends "Perfil.html" %} {% block search %}
 
-
-{% block search %}
-
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-64 p-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
   {% for item in technologias %}
   <div
-    class="card bg-gray-600 rounded-lg shadow-lg flex flex-col overflow-hidden max-h-[250px] min-w-[250px] mx-8"
+    class="card bg-gray-600 rounded-lg shadow-lg flex flex-col overflow-hidden"
   >
-    
-      <img
-        src="{{ item.imagen.url }}"
-        alt="Imagen del Enlace"
-        class="w-full h-48 object-cover rounded-t-lg"
-      />
-    
+    <!-- Imagen -->
+    <img
+      src="{{ item.imagen.url }}"
+      alt="Imagen del Enlace"
+      class="w-full h-48 object-contain rounded-t-lg"
+    />
 
-    <!-- Título del contacto (abajo) -->
-    <h2
-      class="text-yellow-500 underline font-bold text-blue-700 text-center py-2 px-4"
-    >
+    <!-- Título -->
+    <h2 class="text-yellow-500 underline font-bold text-center py-2">
       {{ item.nombre }}
     </h2>
   </div>
   {% endfor %}
 </div>
+<div class="flex justify-center">
+  <nav aria-label="Page navigation" class="mb-4">
+    <ul class="flex items-center space-x-2">
+      {% if page_obj.has_previous %}
+      <!-- Botón para la primera página -->
+      <li>
+        <a
+          class="px-4 py-2 text-white bg-blue-600 rounded-l-lg hover:bg-blue-700"
+          href="?page=1&search={{ request.GET.search|default:'' }}&filter={{ request.GET.filter|default:'' }}"
+          aria-label="Primera"
+        >
+          Primera
+        </a>
+      </li>
+      <!-- Botón para la página anterior -->
+      <li>
+        <a
+          class="px-4 py-2 text-white bg-blue-600 hover:bg-blue-700"
+          href="?page={{ page_obj.previous_page_number }}&search={{ request.GET.search|default:'' }}&filter={{ request.GET.filter|default:'' }}"
+          aria-label="Anterior"
+        >
+          Anterior
+        </a>
+      </li>
+      {% endif %}
+
+      <!-- Página actual -->
+      <li class="px-4 py-2 text-white bg-blue-500 rounded-md">
+        Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}
+      </li>
+
+      {% if page_obj.has_next %}
+      <!-- Botón para la página siguiente -->
+      <li>
+        <a
+          class="px-4 py-2 text-white bg-blue-600 hover:bg-blue-700"
+          href="?page={{ page_obj.next_page_number }}&search={{ request.GET.search|default:'' }}&filter={{ request.GET.filter|default:'' }}"
+          aria-label="Siguiente"
+        >
+          Siguiente
+        </a>
+      </li>
+      <!-- Botón para la última página -->
+      <li>
+        <a
+          class="px-4 py-2 text-white bg-blue-600 rounded-r-lg hover:bg-blue-700"
+          href="?page={{ page_obj.paginator.num_pages }}&search={{ request.GET.search|default:'' }}&filter={{ request.GET.filter|default:'' }}"
+          aria-label="Última"
+        >
+          Última
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+</div>
+
 {% endblock search %}

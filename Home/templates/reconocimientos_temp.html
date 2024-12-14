@@ -1,27 +1,29 @@
-{% extends "Perfil.html" %}
-
-{% block search %}
- {% for reconocimiento in reconocimientos %}
- <div class="md:col-span-2 space-y-6">
-      <div class="bg-gray-600 p-4 shadow rounded">
-        <a href="{{ reconocimiento.enlace }}">
-          <h2 class="text-yellow-500 underline font-bold text-blue-700">
-            {{ reconocimiento.titulo }}
-          </h2>
-        </a>
-
-        <p class="text-white">
-          {{ reconocimiento.Descripcion }}
-        </p>
-      </div>
-     
+{% extends "Perfil.html" %} {% block search %}
+<div class="p-4 w-full">
+  {% for reconocimiento in reconocimientos %}
+  <div
+    class="bg-gray-600 p-4 shadow rounded w-full mb-6 flex items-center justify-between flex-wrap"
+  >
+    <!-- Contenido a la izquierda (Texto) -->
+    <div class="flex-1 pr-4">
+      <a href="{{ reconocimiento.enlace }}">
+        <h2 class="text-lg underline font-bold text-yellow-500">
+          {{ reconocimiento.titulo }}
+        </h2>
+      </a>
+      <p class="text-white mt-2">{{ reconocimiento.Descripcion }}</p>
     </div>
- 
- 
- {% endfor %}
 
+    <!-- Imagen a la derecha -->
+    <div class="w-48 h-48 flex-shrink-0">
+      <img
+        src="{{ reconocimiento.imagen.url }}"
+        class="w-full h-full object-cover rounded"
+        alt="Imagen de {{ reconocimiento.titulo }}"
+      />
+    </div>
+  </div>
+  {% endfor %}
+</div>
 
 {% endblock search %}
-
-
-
