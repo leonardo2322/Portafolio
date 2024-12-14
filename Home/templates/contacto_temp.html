@@ -1,67 +1,76 @@
-{% extends "Perfil.html" %}
-{% load static %}
-
-{% block search %}
-
+{% extends "Perfil.html" %} {% load static %} {% block search %}
 <div class="p-4 w-full">
   {% for item in contactos %}
-    <div class="bg-gray-600 p-4 shadow rounded w-full mb-6 flex items-center justify-between">
-      
-      <!-- Contenido a la izquierda (Texto) -->
-      <div class="flex-1 pr-4">
-        <a href="{{ item.enlace.url }}">
-          <h2 class="text-lg underline font-bold text-yellow-500">
-            {{ item.contacto.titulo }}
-          </h2>
-        </a>
-        <p class="text-white mt-2">
-          Explora los proyectos de desarrollo web y aplicaciones que ha creado
-          Leonardo, incluyendo sistemas con Django y Docker.
-        </p>
-      </div>
-
-      <!-- Imagen a la derecha -->
-      <div class="w-48 h-48 flex-shrink-0">
-        <img src="{{ item.enlace.imagen.url }}" class="w-full h-full object-cover rounded" alt="Imagen de {{ item.contacto.titulo }}" />
-      </div>
+  <div
+    class="bg-gray-600 p-4 shadow rounded w-full mb-6 flex items-center justify-between"
+  >
+    <!-- Contenido a la izquierda (Texto) -->
+    <div class="flex-1 pr-4">
+      <a href="{{ item.enlace.url }}">
+        <h2 class="text-lg underline font-bold text-yellow-500">
+          {{ item.contacto.titulo }}
+        </h2>
+      </a>
+      <p class="text-white mt-2">
+        Explora los proyectos de desarrollo web y aplicaciones que ha creado
+        Leonardo, incluyendo sistemas con Django y Docker.
+      </p>
     </div>
+
+    <!-- Imagen a la derecha -->
+    <div class="w-48 h-48 flex-shrink-0">
+      <img
+        src="{{ item.enlace.imagen.url }}"
+        class="w-full h-full object-cover rounded"
+        alt="Imagen de {{ item.contacto.titulo }}"
+      />
+    </div>
+  </div>
   {% endfor %}
-  <div class="bg-gray-600 p-4 shadow rounded w-full mb-6 flex items-center justify-between">
-      
-      <!-- Contenido a la izquierda (Texto) -->
-      <div class="flex-1 pr-4">
-        <a href="javascript:void(0);" id="copyEmailLink">
-          <h2 class="text-lg underline font-bold text-yellow-500">
-            <i class="fas fa-copy"></i>
 
-            Copiar Correo electronico
-          </h2>
-        </a>
-        <p class="text-white mt-2">
-         Contactame al correo electronico al precionar el enlace se te copiara al portapapeles
-        </p>
-      </div>
-
-      <!-- Imagen a la derecha -->
-      <div class="w-48 h-48 flex-shrink-0">
-        <img src="{% static 'img/correo.png' %}" class="w-full h-full object-cover rounded" alt="Imagen de {{ item.contacto.titulo }}" />
-      </div>
+  <!-- Información adicional para copiar correo -->
+  <div
+    class="bg-gray-600 p-4 shadow rounded w-full mb-6 flex items-center justify-between"
+  >
+    <!-- Contenido a la izquierda (Texto) -->
+    <div class="flex-1 pr-4">
+      <a href="javascript:void(0);" id="copyEmailLink">
+        <h2 class="text-lg underline font-bold text-yellow-500">
+          <i class="fas fa-copy"></i>
+          Copiar Correo electronico
+        </h2>
+      </a>
+      <p class="text-white mt-2">
+        Contactame al correo electrónico al presionar el enlace, se copiará al
+        portapapeles.
+      </p>
     </div>
+
+    <!-- Imagen a la derecha -->
+    <div class="w-48 h-48 flex-shrink-0">
+      <img
+        src="{% static 'img/correo.png' %}"
+        class="w-full h-full object-cover rounded"
+        alt="Imagen de {{ item.contacto.titulo }}"
+      />
+    </div>
+  </div>
 </div>
-
-
-{% endblock search %}
-
-{% block scripting %}
+{% endblock search %} {% block scripting %} {{ block.super }}
 <script>
-        document.getElementById('copyEmailLink').addEventListener('click', function() {
-            const email = 'joys23services@gmail.com'; 
+  document
+    .getElementById("copyEmailLink")
+    .addEventListener("click", function () {
+      const email = "joys23services@gmail.com";
 
-            navigator.clipboard.writeText(email).then(function() {
-                alert('Correo copiado al portapapeles');
-            }).catch(function(err) {
-                alert('Error al copiar el correo: ' + err);
-            });
+      navigator.clipboard
+        .writeText(email)
+        .then(function () {
+          alert("Correo copiado al portapapeles");
+        })
+        .catch(function (err) {
+          alert("Error al copiar el correo: " + err);
         });
+    });
 </script>
 {% endblock scripting %}

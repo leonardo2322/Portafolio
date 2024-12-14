@@ -1,4 +1,7 @@
-{% extends "Perfil.html" %} {% block search %}
+{% extends "Perfil.html" %} {% load static %} {% load i18n %}
+<!-- Cargar el tag de internacionalización -->
+
+{% block search %}
 <div class="p-4 w-full">
   {% for reconocimiento in reconocimientos %}
   <div
@@ -19,11 +22,10 @@
       <img
         src="{{ reconocimiento.imagen.url }}"
         class="w-full h-full object-cover rounded"
-        alt="Imagen de {{ reconocimiento.titulo }}"
+        alt="{% trans 'Imagen de' %} {{ reconocimiento.titulo }}"
       />
     </div>
   </div>
   {% endfor %}
 </div>
-
 {% endblock search %}

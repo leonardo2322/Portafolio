@@ -1,4 +1,7 @@
-{% extends "Perfil.html" %} {% block search %}
+{% extends "Perfil.html" %} {% load static %} {% load i18n %}
+<!-- Cargar el tag de internacionalización -->
+
+{% block search %}
 <div class="p-4 w-full">
   {% for proyecto in proyectos %}
   <div
@@ -11,9 +14,15 @@
           {{ proyecto.nombre }}
         </h2>
       </a>
-      <p class="text-white mt-2">{{ proyecto.detalles }} <br>
-      <button class="ver underline text-yellow-500" data-id="{{ proyecto.imagen.url }}">ver imagen</button>
-
+      <p class="text-white mt-2">
+        {{ proyecto.detalles }}
+        <br />
+        <button
+          class="ver underline text-yellow-500"
+          data-id="{{ proyecto.imagen.url }}"
+        >
+          {% trans "Ver imagen" %}
+        </button>
       </p>
     </div>
 
@@ -22,35 +31,36 @@
       <img
         src="{{ proyecto.imagen.url }}"
         class="w-full h-full object-contain rounded"
-        alt="Imagen de {{ item.contacto.titulo }}"
+        alt="{% trans 'Imagen de' %} {{ proyecto.nombre }}"
       />
     </div>
   </div>
   {% endfor %}
 </div>
+
+<!-- Modal -->
 <div
   id="myModal"
-  class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50 hidden "
+  class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50 hidden"
 >
-  <div class="bg-gray-800 p-6 rounded-lg shadow-lg max-w-lg ">
+  <div class="bg-gray-800 p-6 rounded-lg shadow-lg max-w-lg">
     <!-- Encabezado del Modal -->
-    <div class="flex justify-between items-center ">
-      <h2 class="text-2xl font-semibold text-white">Imagen</h2>
+    <div class="flex justify-between items-center">
+      <h2 class="text-2xl font-semibold text-white">{% trans "Imagen" %}</h2>
       <button id="closeModalButton" class="text-gray-500 hover:text-gray-700">
         <span class="text-2xl">&times;</span>
       </button>
     </div>
 
     <!-- Contenido del Modal -->
-    <div class="w-full  max-w-8xl mx-auto p-4">
-  <img
-  id="modalImage"
-    src=""
-    class="imagen w-full h-64 object-contain rounded-lg"
-    alt="Imagen de {{ proyecto.titulo }}"
-  />
-</div>
-
+    <div class="w-full max-w-8xl mx-auto p-4">
+      <img
+        id="modalImage"
+        src=""
+        class="imagen w-full h-64 object-contain rounded-lg"
+        alt="{% trans 'Imagen del proyecto' %}"
+      />
+    </div>
 
     <!-- Botones en el pie del modal -->
     <div class="mt-6 flex justify-end">
@@ -58,47 +68,41 @@
         id="closeModalButtonFooter"
         class="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 mr-2"
       >
-        Cerrar
-      </button>
-      <button
-        class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-      >
-        Acción del Modal
+        {% trans "Cerrar" %}
       </button>
     </div>
   </div>
 </div>
-{% endblock search %}
-
-{% block scripting %}
-{{ block.super }}
+{% endblock search %} {% block scripting %} {{ block.super }}
 <script>
-  const botones = document.querySelectorAll('.ver')
-   const myModal = document.getElementById("myModal");
-     const closeModalButtons = document.querySelectorAll("#closeModalButton, #closeModalButtonFooter");
+  const botones = document.querySelectorAll(".ver");
+  const myModal = document.getElementById("myModal");
+  const closeModalButtons = document.querySelectorAll(
+    "#closeModalButton, #closeModalButtonFooter"
+  );
 
   // Función para abrir el modal
-botones.forEach((boton) => {
-  boton.addEventListener("click", (event) => {
-    const modalImage = myModal.querySelector("#modalImage");
-    
-    const dataimg = event.target.getAttribute("data-id");
-    modalImage.src = dataimg
-    myModal.classList.remove("hidden"); 
+  botones.forEach((boton) => {
+    boton.addEventListener("click", (event) => {
+      const modalImage = myModal.querySelector("#modalImage");
+      const dataimg = event.target.getAttribute("data-id");
+      modalImage.src = dataimg;
+      myModal.classList.remove("hidden");
+    });
   });
-});
-  // Función para cerrar el modal
-closeModalButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    myModal.classList.add("hidden"); // Oculta el modal
-  });
-});
 
-// Cerrar el modal si se hace clic fuera del contenido
-myModal.addEventListener("click", (event) => {
-  if (event.target === myModal) {
-    myModal.classList.add("hidden"); // Oculta el modal si se hace clic fuera de él
-  }
-});
+  // Función para cerrar el modal
+  closeModalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      myModal.classList.add("hidden"); // Oculta el modal
+    });
+  });
+
+  // Cerrar el modal si se hace clic fuera del contenido
+  myModal.addEventListener("click", (event) => {
+    if (event.target === myModal) {
+      myModal.classList.add("hidden"); // Oculta el modal si se hace clic fuera de él
+    }
+  });
 </script>
 {% endblock scripting %}

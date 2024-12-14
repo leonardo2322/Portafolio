@@ -19,7 +19,9 @@
       <span class="text-red-500">ez</span>
     </h1>
   </div>
-  <div class="flex justify-between p-4 overflow-hidden whitespace-nowrap text-ellipsis">
+  <div
+    class="flex justify-between p-4 overflow-hidden whitespace-nowrap text-ellipsis"
+  >
     <a
       href="{% url 'portafolio' %}"
       class="enlaces text-white border-b-2 border-transparent hover:border-yellow-500 pb-2 flex-grow text-center overflow-hidden whitespace-nowrap text-ellipsis"
@@ -186,16 +188,18 @@
           </a>
 
           <p class="text-white">
-            "Somos lo que hacemos repetidamente. Por ende, la excelencia no es un acto, es un hábito." <br>
+            "Somos lo que hacemos repetidamente. Por ende, la excelencia no es
+            un acto, es un hábito."
+            <br />
             -Aristóteles
           </p>
           <div class="w-48 h-48 flex-shrink-0">
-      <img
-        src="{% static 'img/aristoteles.webp' %}"
-        class="w-full h-full object-cover rounded"
-        alt="Imagen de {{ reconocimiento.titulo }}"
-      />
-    </div>
+            <img
+              src="{% static 'img/aristoteles.webp' %}"
+              class="w-full h-full object-cover rounded"
+              alt="Imagen de {{ reconocimiento.titulo }}"
+            />
+          </div>
         </div>
       </div>
 

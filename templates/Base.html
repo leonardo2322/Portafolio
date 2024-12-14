@@ -1,10 +1,10 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página de búsqueda</title>
+    <title>{% trans "Portafolio" %}</title>
 
     <!-- font awesome CSS CDN -->
     <link
@@ -62,7 +62,7 @@
         <input
           type="text"
           name="q"
-          placeholder="Preciona buscar mi perfil para comenzar"
+          placeholder="{% trans 'Preciona buscar mi perfil para comenzar' %}"
           class="flex-grow text-black bg-transparent focus:outline-none text-lg px-2 placeholder-gray-500"
         />
         <div class="flex items-center space-x-4">
@@ -125,12 +125,12 @@
         href="{% url 'portafolio' %}"
         class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300"
       >
-        Buscar Mi perfil
+        {% trans "Buscar Mi perfil" %}
       </a>
       <button
         class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300"
       >
-        Descargar CV
+        {% trans "Descargar CV" %}
         <i class="fas fa-download"></i>
       </button>
     </div>
@@ -146,7 +146,7 @@
           }
         }, 7000);
       });
-      const text = "Bienvenido.";
+      const text = "{% trans 'Bienvenido.' %}";
       const textContainer = document.getElementById("animatedText");
       const currentPath = window.location.pathname;
       let index = 0;
@@ -159,13 +159,10 @@
         }
       }
       if (currentPath === "/") {
-        console.log(currentPath)
-      typeText();
-        
+        console.log(currentPath);
+        typeText();
       }
-      
     </script>
-    {% block scripting %}
-    {% endblock  %}
+    {% block scripting %} {% endblock %}
   </body>
 </html>
