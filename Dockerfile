@@ -9,6 +9,8 @@ RUN pip install --no-cache-dir -r /web/requirements.txt
 COPY . .
 
 RUN python manage.py collectstatic --noinput
+RUN python manage.py migrate
+
 
 EXPOSE 8000
 
