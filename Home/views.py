@@ -31,6 +31,7 @@ class Technologias_view(ListView):
     template_name = 'technologias_temp.html'
     context_object_name = 'technologias'
     paginate_by = 12
+    ordering = ['nombre']
 
 class Contacto_view(ListView):
     model = Contacto
