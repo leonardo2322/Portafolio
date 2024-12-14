@@ -41,7 +41,6 @@ coverage.xml
 # /static/js/
 
 # Media files
-/media/
 
 # VS Code
 .vscode/

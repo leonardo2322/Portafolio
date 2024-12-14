@@ -137,7 +137,7 @@
       {% block search %}
       <div class="md:col-span-2 space-y-6">
         <div class="bg-gray-600 p-4 shadow rounded">
-          <a href="#">
+          <a href="{% url 'reconocimientos' %}">
             <h2 class="text-yellow-500 underline font-bold text-blue-700">
               Leonardo Mendez - Reconocimientos
             </h2>
@@ -159,6 +159,43 @@
             Explora los proyectos de desarrollo web y aplicaciones que ha creado
             Leonardo, incluyendo sistemas con Django y Docker.
           </p>
+        </div>
+        <div class="bg-gray-600 p-4 shadow rounded">
+          <a href="{% url 'contacto' %}">
+            <h2 class="text-yellow-500 underline font-bold text-blue-700">
+              Contactame o visualiza mis perfiles sociales - Contacto
+            </h2>
+          </a>
+
+          <p class="text-white">Enviame un correo</p>
+        </div>
+        <div class="bg-gray-600 p-4 shadow rounded">
+          <a href="{% url 'tech' %}">
+            <h2 class="text-yellow-500 underline font-bold text-blue-700">
+              tecnologias que domino - Technologias
+            </h2>
+          </a>
+
+          <p class="text-white">mira la seccion de imagenes del buscador</p>
+        </div>
+        <div class="bg-gray-600 p-4 shadow rounded">
+          <a href="#">
+            <h2 class="text-yellow-500 underline font-bold text-blue-700">
+              Gracias por visitar - Nuestro navegador
+            </h2>
+          </a>
+
+          <p class="text-white">
+            "Somos lo que hacemos repetidamente. Por ende, la excelencia no es un acto, es un hábito." <br>
+            -Aristóteles
+          </p>
+          <div class="w-48 h-48 flex-shrink-0">
+      <img
+        src="{% static 'img/aristoteles.webp' %}"
+        class="w-full h-full object-cover rounded"
+        alt="Imagen de {{ reconocimiento.titulo }}"
+      />
+    </div>
         </div>
       </div>
 
