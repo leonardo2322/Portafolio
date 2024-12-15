@@ -45,7 +45,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://portafolio-j7ca.onrender.com/',  
+    'https://portafolio-j7ca.onrender.com'
 ]
 
 ROOT_URLCONF = 'Portafolio.urls'
