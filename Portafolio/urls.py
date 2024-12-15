@@ -24,5 +24,6 @@ urlpatterns = [
     path('',include('Home.urls'))
 ]
 
-
-urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:  # Solo incluir en modo DEBUG para no servir archivos en producción
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
