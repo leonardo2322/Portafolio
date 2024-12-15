@@ -121,7 +121,7 @@ os.makedirs(STATIC_ROOT, exist_ok=True)
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-
+DEBUG_PROPAGATE_EXCEPTIONS = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 if not DEBUG:
