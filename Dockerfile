@@ -1,14 +1,26 @@
+
 FROM python:3.11-alpine3.20
+
 
 WORKDIR /web
 
-COPY ./requirements.txt requirements.txt
+
+COPY ./requirements.txt /web/requirements.txt
+
+
+RUN apk update && apk add --no-cache \
+    libpq-dev gcc musl-dev bash \
+    && rm -rf /var/cache/apk/*
 
 RUN pip install --no-cache-dir -r /web/requirements.txt
 
-COPY . .
+COPY ./entrypoint.sh /entrypoint.sh
+COPY ./wait-for-it.sh /wait-for-it.sh
 
+RUN chmod +x /entrypoint.sh /wait-for-it.sh
+
+COPY . /web
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn --bind 0.0.0.0:$PORT Portafolio.wsgi:application"]
+ENTRYPOINT ["/entrypoint.sh"]
