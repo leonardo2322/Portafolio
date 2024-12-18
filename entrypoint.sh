@@ -6,4 +6,10 @@
 
 python manage.py migrate --noinput
 python manage.py collectstatic --noinput
+python manage.py makemigrations Home
+python manage.py migrate Home
 exec gunicorn --bind 0.0.0.0:8000 Portafolio.wsgi:application
+
+
+
+
