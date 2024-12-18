@@ -19,6 +19,9 @@ COPY ./wait-for-it.sh /wait-for-it.sh
 
 RUN chmod +x /entrypoint.sh /wait-for-it.sh
 
+
+RUN mkdir -p /web/static /web/media
+
 COPY . /web
 
 EXPOSE 8000

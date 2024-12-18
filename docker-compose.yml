@@ -6,6 +6,8 @@ services:
     command: sh -c "python manage.py migrate --noinput && gunicorn --bind 0.0.0.0:8000 Portafolio.wsgi:application"
     volumes:
       - .:/web
+      - static_volume:/web/static
+      - media_volume:/web/media
     environment:
       - DEBUG=0
       - DATABASE_URL=${DATABASE_URL}
@@ -25,3 +27,5 @@ services:
 
 volumes:
   postgres_data:
+  static_volume:
+  media_volume:
